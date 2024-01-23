@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            position: relative;
+            background-color: black;
+            width: 400px;
+            height: 400px;
+           margin-left: 50px;
+           margin-top: 30px;
+           border-radius: 50%;
+           text-align: center;
+          
+        }
+        #write{
+            position: absolute;
+           margin-top: 41%;
+           margin-left: 23%;
+           font-size: 65px;
+           font-weight: 700;
+          
+        }
+    </style>
+</head>
+<body>
+   
+    <button id="add">Add style</button>
+    <button id="remove">Remove style</button>
+    <div id="div"><p id="write"></p></div>
+
+</body>
+<script>
+    const divstyle = document.getElementById('div');
+    const txtstyle = document.getElementById('write');
+    
+    document.getElementById('add').addEventListener('click',function(){
+        divstyle.style.backgroundColor = 'yellow';
+        write.innerHTML = 'Light On';
+       
+        write.style.color = 'red';
+       
+       
+      
+    })
+
+    document.getElementById('remove').addEventListener('click',function(){
+
+        divstyle.style.backgroundColor = 'black';
+        write.innerHTML = 'Ligth off';
+        write.style.color = 'white';
+       
+    })
+
+
+
+</script>
+</html>
