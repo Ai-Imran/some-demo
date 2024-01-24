@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Onchange</title>
+    <style>
+        body{
+            background-color: chartreuse;
+        }
+        form{
+            background-color: cornflowerblue;
+            height: 300px;
+            width: 500px;
+            text-align: center;
+            margin-top: 10%;
+            margin-left: 30%;
+            border-radius: 5px;
+            box-shadow: 0px 20px  200px -30px inset  red;
+            font-size: 25px;
+            font-weight: 800;
+            color: rgb(75, 64, 64);
+            
+        }
+        #name{
+            margin-top: 30px;
+        }
+        #name, #email, #password{
+            font-size: 17px;
+            font-weight: 500;
+            padding: 8px;
+            outline: 0;
+            border: 0;
+            border-radius: 4px;
+
+        }
+        .style{
+            background-color: rgb(237, 240, 91);
+            padding: 8px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            outline: 0;
+            color: rgb(75, 64, 64);
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="name">
+            Name ----: 
+            <input type="text" id="name" name="name" autofocus required>
+        </label> <br><br>
+        <label for="email">
+            Email ----: 
+            <input type="email" id="email" name="email" size="" required >
+        </label> <br><br>
+        <label for="password">
+            Password : 
+            <input type="password" id="password" name="password" minlength="5" maxlength="15" required size="">
+        </label> <br><br>
+        <input type="reset" class="style" value="Reset">
+        <input type="submit" class="style" value="Sign Up">
+    
+        
+        
+    </form>
+
+    <script>
+        
+        const form = document.querySelector('form');
+        const name = form.querySelector('#name');
+        const email = form.querySelector('#email');
+        const password = form.querySelector('#password');
+       
+        form.addEventListener('submit',function(event){
+            event.preventDefault();
+            // console.log('submit');
+            console.log();
+            console.log();
+            console.log();
+
+            const useInfo = {
+                name: name.value,
+                email: email.value,
+                password: password.value
+            }
+            console.log(useInfo);
+
+            name.value = '';
+            email.value = '';
+            password.value = '';
+        })
+
+
+
+    </script>
+</body>
+</html>
